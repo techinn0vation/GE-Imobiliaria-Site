@@ -1,4 +1,4 @@
-import Content from 'components/Content'
+import Categorias from 'components/Categorias'
 import Hero from 'components/Hero'
 
-export { Hero, Content }
+export { Hero, Categorias }

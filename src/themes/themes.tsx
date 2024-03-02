@@ -1,7 +1,10 @@
-export const theme = {
+import { TypeTheme } from './theme'
+
+export const theme: TypeTheme = {
   colors: {
     Preto: '#131418',
-    Marrom: '#AB795A',
+    MarromClaro: '#9D6E36',
+    MarromEscuro: '#755227',
     Branco: '#FFFFFF',
     Cinza: '#EEEEEE',
     Azul: '#0061FF',

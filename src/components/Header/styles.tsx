@@ -4,52 +4,32 @@ import styled from 'styled-components'
 
 export const WrapperHeader = styled.header`
   width: 100%;
-  max-width: 108rem;
-  margin: 0 auto;
+  height: auto;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
   align-items: center;
 
-  @media (min-width: ${(props) => props.theme.screenSize.MD}) {
-    position: relative;
-
-    &::before {
-      content: '';
-      position: absolute;
-      width: 13rem;
-      height: 130vh;
-      background-color: ${(props) => props.theme.colors.Marrom};
-      top: 0;
-      left: 0;
-      transform: translate(0);
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      width: 1.5rem;
-      height: 100%;
-      background-color: ${(props) => props.theme.colors.Marrom};
-      top: 50%;
-      right: 0;
-      transform: translate(0, 25rem);
-    }
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* background-color: ${(props) => props.theme.colors.MarromClaro}; */
 `
 export const ContentHeader = styled.main`
-  width: 100%;
-  max-width: 20rem;
-  margin: 0 auto;
+  width: auto;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
   align-items: center;
 
-  background-color: ${(props) => props.theme.colors.Marrom};
+  background-color: ${(props) => props.theme.colors.MarromEscuro};
 `
 export const Branding = styled(Image)`
-  width: 100%;
+  width: 20rem;
   height: auto;
 
   object-fit: contain;

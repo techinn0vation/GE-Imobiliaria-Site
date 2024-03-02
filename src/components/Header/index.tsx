@@ -6,9 +6,10 @@ export default function Header() {
   return (
     <WrapperHeader>
       <ContentHeader>
+        `
         <Branding
           src={Brand}
-          alt='Grupo Gestão Empreendimentos'
+          alt='Grupo Gestãp empreendimentos'
           priority={true}
         />
       </ContentHeader>

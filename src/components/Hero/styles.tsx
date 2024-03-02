@@ -1,25 +1,39 @@
 import styled from 'styled-components'
 
-import BgHero from 'assets/img/House.webp'
+import BgHero from 'assets/img/BgHero.webp'
 
 export const WrapperHero = styled.section`
   width: 100%;
   min-height: 100vh;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
   align-items: center;
 
   position: relative;
-  overflow: hidden;
 
   &::before {
     content: '';
-    position: fixed;
     width: 100%;
     height: 100%;
+    position: absolute;
+
     background: url(${BgHero.src}) center no-repeat fixed;
     background-size: cover;
+    top: 0;
+    left: 0;
+
+    z-index: -1;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: ${(props) => props.theme.colors.Shadow};
     top: 0;
     left: 0;
 
@@ -27,30 +41,43 @@ export const WrapperHero = styled.section`
     z-index: -1;
   }
 
-  &::after {
-    content: '';
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    background-color: ${(props) => props.theme.colors.Shadow};
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
+  /* -webkit-animation: fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+  animation: fadeIn 1s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  } */
 `
 export const ContentHero = styled.main`
   width: 100%;
   max-width: 108rem;
+  height: auto;
   margin: 0 auto;
 
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 1.6rem;
+`
+export const ViewHero = styled.div`
+  width: 100%;
   height: auto;
 
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  justify-content: center;
   align-items: center;
-  gap: 2rem;
 
-  padding: 1.5rem;
+  margin-top: 12.7rem;
 
   & > div:nth-child(1) {
     width: auto;
@@ -59,11 +86,13 @@ export const ContentHero = styled.main`
     align-items: start;
     gap: 1.6rem;
 
+    padding: 1.6rem 0;
+
     h1 {
-      font-size: 4.8rem;
+      font-size: 4rem;
       font-style: normal;
       font-weight: 600;
-      line-height: 7.2rem;
+      line-height: 6rem;
       color: ${(props) => props.theme.colors.Branco};
       text-align: center;
 
@@ -75,7 +104,7 @@ export const ContentHero = styled.main`
     p {
       font-size: 1.6rem;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 500;
       line-height: 2.4rem;
       color: ${(props) => props.theme.colors.Branco};
       text-align: center;
@@ -89,14 +118,13 @@ export const ContentHero = styled.main`
   &::before,
   &::after {
     content: '';
-    width: 0.1rem;
-    height: 15rem;
+    width: 0.2rem;
+    height: 10rem;
+    border-radius: 0.2rem;
     background-color: ${(props) => props.theme.colors.Branco};
   }
 
   @media (min-width: ${(props) => props.theme.screenSize.MD}) {
-    & > div:nth-child(1) {
-      max-width: 48rem;
-    }
+    width: 49rem;
   }
 `

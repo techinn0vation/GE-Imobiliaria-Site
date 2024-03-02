@@ -1,10 +1,10 @@
-import { Content, Hero } from 'components/GeralComponents'
+import { Hero, Categorias } from 'components/GeralComponents'
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <Content />
+      <Categorias />
     </>
   )
 }
